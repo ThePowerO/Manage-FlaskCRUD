@@ -31,3 +31,5 @@ def add_user():
         flash("데이터 등록했어요", "성공")
         return redirect(url_for("index"))
     return render_template("add_user.html")
+
+@app.route('/edit_user/<string:id>', methods=['POST', 'GET'])
