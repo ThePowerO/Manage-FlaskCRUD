@@ -15,3 +15,4 @@ def index():
     return render_template('index.html', datas=data)
 
 @app.route('/add_user', methods=['POST', 'GET'])
+def add_user():
