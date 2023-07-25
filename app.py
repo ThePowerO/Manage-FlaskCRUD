@@ -8,3 +8,4 @@ app = Flask(__name__)
 
 def index():
     con = sql.connect("database.db")
+    con.row_factory = sql.Row
