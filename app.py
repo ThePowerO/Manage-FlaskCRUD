@@ -37,3 +37,4 @@ def edit_user(id):
     if request.mothod == "POST":
         이름 = request.form['이름']
         나이 = request.form['나이']
+        거리 = request.form['거리']
