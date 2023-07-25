@@ -22,3 +22,4 @@ def add_user():
         거리 = request.form['거리']
         도시 = request.form['도시']
         전화_번호 = request.form['전화_번호']
+        이메일 = request.form['이메일']
