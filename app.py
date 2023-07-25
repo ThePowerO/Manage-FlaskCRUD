@@ -13,3 +13,5 @@ def index():
     cur.execute("select * from users")
     data = cur.fetchall()
     return render_template('index.html', datas=data)
+
+@app.route('/add_user', methods=['POST', 'GET'])
