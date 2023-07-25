@@ -26,3 +26,4 @@ def add_user():
 
         con = sql.connect('database.db')
         cur = con.cursor()
+        cur.execute('INSERT INTO users (이름, 나이, 거리, 도시, 전화_번호, 이메일) values (?,?,?,?,?,?)', (이름, 나이, 거리, 도시, 전화_번호, 이메일, id))
