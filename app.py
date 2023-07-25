@@ -38,3 +38,4 @@ def edit_user(id):
         이름 = request.form['이름']
         나이 = request.form['나이']
         거리 = request.form['거리']
+        도시 = request.form['도시']
