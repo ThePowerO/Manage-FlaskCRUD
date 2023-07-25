@@ -17,3 +17,4 @@ def index():
 @app.route('/add_user', methods=['POST', 'GET'])
 def add_user():
     if request.mothod == "POST":
+        이름 = request.form['이름']
