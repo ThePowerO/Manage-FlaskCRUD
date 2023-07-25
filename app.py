@@ -11,3 +11,4 @@ def index():
     con.row_factory = sql.Row
     cur = con.cursor()
     cur.execute("select * from users")
+    data = cur.fetchall()
