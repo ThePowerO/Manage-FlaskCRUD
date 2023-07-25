@@ -33,3 +33,4 @@ def add_user():
     return render_template("add_user.html")
 
 @app.route('/edit_user/<string:id>', methods=['POST', 'GET'])
+def edit_user(id):
