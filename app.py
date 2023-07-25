@@ -25,3 +25,4 @@ def add_user():
         이메일 = request.form['이메일']
 
         con = sql.connect('database.db')
+        cur = con.cursor()
