@@ -7,3 +7,4 @@ app = Flask(__name__)
 @app.route('/index')
 
 def index():
+    con = sql.connect("database.db")
