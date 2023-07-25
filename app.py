@@ -44,3 +44,26 @@ def edit_user(id):
 
         con = sql.connect('database.db')
         cur = con.cursor()
+        cur.execute('UPDATE users SET 이름=?, 나이=?, 거리=?, 도시=?, 전화_번호=?, 이메일=? WHERE ID=?', (이름, 나이, 거리, 도시, 전화_번호, 이메일, id))
+        con.commit()
+        flash("데이터 등록했어요", "성공")
+        return redirect(url_for("index"))
+    con = sql.connect('database.db')
+    con.row_factory = sql.Row
+    cur = con.cursor()
+    cur.execute('SELECT * FROM users WHERE ID=?', (id))
+    data = cur.fetchone
+    return render_template('edit_user.html', datas=data)
+
+@app.route('/delete_user/<string:id>', methods=['GET'])
+def delete_user():
+    con = sql.connect("database.db")
+    cur = con.cursor()
+    cur.execute("DELETE FROM users WHERE ID=?", (id))
+    con.commit()
+    flash("데이터 삭젰어요", "성공")
+    return redirect(url_for('index'))
+
+if __name__ == "__main__":
+    app.secret_key = "admin123"
+    app.run(debug=True)
