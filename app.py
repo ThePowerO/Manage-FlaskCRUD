@@ -30,3 +30,4 @@ def add_user():
         con.commit()
         flash("데이터 등록했어요", "성공")
         return redirect(url_for("index"))
+    return render_template("add_user.html")
