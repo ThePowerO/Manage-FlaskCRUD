@@ -4,3 +4,33 @@
     <div class="col-5 mx-auto">
         <h3>Register</h3><hr>
         <form method="post" action="{{url_for('add_user')}}">
+            <div class="form-group">
+                <label>이름 (Name)</label>
+                <input type="text" name="이름" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label>나이 (Age)</label>
+                <input type="text" name="나이" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label>거리 (Street)</label>
+                <input type="text" name="거리" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label>도시 (City)</label>
+                <input type="text" name="도시" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label>전화_번호 (Phone)</label>
+                <input type="text" name="전화_번호" required class="form-control">
+            </div>
+            <div class="form-control">
+                <label>이메일 (E-mail)</label>
+                <input type="text" name="이메일" required class="form-control">
+            </div>
+        </br>
+            <input type="submit" value="Add" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}
