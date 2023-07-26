@@ -16,7 +16,7 @@ def index():
 
 @app.route('/add_user', methods=['POST', 'GET'])
 def add_user():
-    if request.mothod == "POST":
+    if request.method == "POST":
         이름 = request.form['이름']
         나이 = request.form['나이']
         거리 = request.form['거리']
@@ -34,7 +34,7 @@ def add_user():
 
 @app.route('/edit_user/<string:id>', methods=['POST', 'GET'])
 def edit_user(id):
-    if request.mothod == "POST":
+    if request.method == "POST":
         이름 = request.form['이름']
         나이 = request.form['나이']
         거리 = request.form['거리']
