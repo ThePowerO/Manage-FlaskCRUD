@@ -51,7 +51,7 @@ def edit_user(id):
     con = sql.connect('database.db')
     con.row_factory = sql.Row
     cur = con.cursor()
-    cur.execute('SELECT * FROM users WHERE ID=?', (id))
+    cur.execute('SELECT * FROM users WHERE ID=?', (id,))
     data = cur.fetchone
     return render_template('edit_user.html', datas=data)
 
