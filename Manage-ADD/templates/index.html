@@ -23,7 +23,7 @@
         <td>{{row.city}}</td>
         <td>{{row.phone}}</td>
         <td>{{row.email}}</td>
-        <td><a href="{{url_for('edit_user', id=row.ID)}}" class="btn btn-primary">편집</a></td>
+        <td><a href="{{url_for('edit_user', id=row.ID)}}" class="btn btn-primary">편집 (Edit)</a></td>
         <td><a href="{{url_for('delete_user', id=row.ID)}}" class="btn btn-danger" onclick="return ('Are you sure you want to delete?')">삭제</a></td>
       </tr>
     </tbody>
