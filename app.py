@@ -28,7 +28,7 @@ def add_user():
         cur = con.cursor()
         cur.execute('INSERT INTO users (이름, 나이, 거리, 도시, 전화_번호, 이메일) values (?,?,?,?,?,?)', (이름, 나이, 거리, 도시, 전화_번호, 이메일))
         con.commit()
-        flash("데이터 등록했어요", "성공")
+        flash("데이터 등록했어요", "success")
         return redirect(url_for("index"))
     return render_template("add_user.html")
 
@@ -46,7 +46,7 @@ def edit_user(id):
         cur = con.cursor()
         cur.execute('UPDATE users SET 이름=?, 나이=?, 거리=?, 도시=?, 전화_번호=?, 이메일=? WHERE ID=?', (이름, 나이, 거리, 도시, 전화_번호, 이메일, id))
         con.commit()
-        flash("데이터 등록했어요", "성공")
+        flash("데이터 등록했어요", "success")
         return redirect(url_for("index"))
     con = sql.connect('database.db')
     con.row_factory = sql.Row
@@ -61,7 +61,7 @@ def delete_user(id):
     cur = con.cursor()
     cur.execute("DELETE FROM users WHERE ID=?", (id))
     con.commit()
-    flash("데이터 삭젰어요", "성공")
+    flash("데이터 삭젰어요", "success")
     return redirect(url_for('index'))
 
 if __name__ == "__main__":
