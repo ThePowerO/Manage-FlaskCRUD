@@ -28,7 +28,7 @@ def add_user():
         cur = con.cursor()
         cur.execute('INSERT INTO users (이름, 나이, 거리, 도시, 전화_번호, 이메일) values (?,?,?,?,?,?)', (이름, 나이, 거리, 도시, 전화_번호, 이메일))
         con.commit()
-        flash("데이터 등록했어요", "success")
+        flash("데이터 등록했어요 (Data Registered)", "success")
         return redirect(url_for("index"))
     return render_template("add_user.html")
 
@@ -52,7 +52,7 @@ def edit_user(id):
     con.row_factory = sql.Row
     cur = con.cursor()
     cur.execute('SELECT * FROM users WHERE ID=?', (id,))
-    data = cur.fetchone
+    data = cur.fetchone()
     return render_template('edit_user.html', datas=data)
 
 @app.route('/delete_user/<string:id>', methods=['GET'])
