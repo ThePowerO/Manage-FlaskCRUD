@@ -56,7 +56,7 @@ def edit_user(id):
     return render_template('edit_user.html', datas=data)
 
 @app.route('/delete_user/<string:id>', methods=['GET'])
-def delete_user():
+def delete_user(id):
     con = sql.connect("database.db")
     cur = con.cursor()
     cur.execute("DELETE FROM users WHERE ID=?", (id))
