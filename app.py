@@ -59,7 +59,7 @@ def edit_user(id):
 def delete_user(id):
     con = sql.connect("database.db")
     cur = con.cursor()
-    cur.execute("DELETE FROM users WHERE ID=?", (id))
+    cur.execute("DELETE FROM users WHERE ID=?", (id,))
     con.commit()
     flash("데이터 삭젰어요", "success")
     return redirect(url_for('index'))
