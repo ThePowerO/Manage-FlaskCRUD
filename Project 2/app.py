@@ -9,3 +9,4 @@ def index():
     con = sql.connect("database.db")
     con.row_factory = sql.Row
     cur = con.cursor()
+    cur.execute("SELECT * FROM GiveAways")
