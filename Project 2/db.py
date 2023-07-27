@@ -16,3 +16,5 @@ sql = """CREATE TABLE 'GiveAways' (
        "Duration" TEXT
 
 )"""
+
+cur.execute(sql)
