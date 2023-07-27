@@ -10,3 +10,4 @@ def index():
     con.row_factory = sql.Row
     cur = con.cursor()
     cur.execute("SELECT * FROM GiveAways")
+    data = cur.fetchall()
