@@ -14,3 +14,4 @@ def index():
     return render_template('index.html', datas=data)
 
 app.route('/add_giveaway', methods=['POST', 'GET'])
+def Add_GiveAway():
