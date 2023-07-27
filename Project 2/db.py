@@ -9,3 +9,4 @@ sql = """CREATE TABLE 'GiveAways' (
        "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
        "GiveAway Name" TEXT,
        "Type" TEXT,
+       "Reward" TEXT,
