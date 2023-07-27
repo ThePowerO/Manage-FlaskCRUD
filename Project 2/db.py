@@ -10,3 +10,4 @@ sql = """CREATE TABLE 'GiveAways' (
        "GiveAway Name" TEXT,
        "Type" TEXT,
        "Reward" TEXT,
+       "Entries" TEXT,
