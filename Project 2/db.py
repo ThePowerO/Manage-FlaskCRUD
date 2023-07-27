@@ -7,3 +7,4 @@ cur.execute("DROP TABLE IF EXISTS giveaways")
 
 sql = """CREATE TABLE 'GiveAways' (
        "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+       "GiveAway Name" TEXT,
