@@ -18,3 +18,4 @@ sql = """CREATE TABLE 'GiveAways' (
 )"""
 
 cur.execute(sql)
+con.commit()
