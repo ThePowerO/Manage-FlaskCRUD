@@ -11,3 +11,4 @@ def index():
     cur = con.cursor()
     cur.execute("SELECT * FROM GiveAways")
     data = cur.fetchall()
+    return render_template('index.html', datas=data)
