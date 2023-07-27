@@ -16,3 +16,4 @@ def index():
 app.route('/add_giveaway', methods=['POST', 'GET'])
 def Add_GiveAway():
     if request.method == 'POST':
+        GiveAway_Name = request.form['GiveAway Name']
