@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h3 class="text center text-muted mb-3"></h3>
+<p class="text-right"><a href="#" class="btn btn-success">#New Giveaway</a>
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">ID</th>
+        <th scope="col">GiveAway Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Reward</th>
+        <th scope="col">Entries</th>
+        <th scope="col">Max Winners</th>
+        <th scope="col">Initial Date</th>
+        <th scope="col">Duration</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for row in datas %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{row.GiveAway_Name}}</td>
+        <td>{{row.Type}}</td>
+        <td>{{row.Reward}}</td>
+        <td>{{row.Entries}}</td>
+        <td>{{row.Max_Winners}}</td>
+        <td>{{row.Initial_Date}}</td>
+        <td>{{row.Duration}}</td>
+        <td><a href="{{url_for('edit_giveaway', id=row.ID)}}" class="btn btn-primary">Edit</a></td>
+        <td><a href="{{url_for('delete_giveaway', id=row.ID)}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
