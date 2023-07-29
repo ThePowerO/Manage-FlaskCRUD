@@ -8,15 +8,15 @@
 
 <body>
     <header>
-        <nav class="navbar bg-primary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Giveaways</a>
+                      <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Giveaways</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Create Giveaway</a>
+                      <a class="nav-link" href="{{url_for('add_giveaway')}}">Create Giveaway</a>
                     </li>
                   </ul>
                 </div>
