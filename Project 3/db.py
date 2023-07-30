@@ -16,3 +16,4 @@ sql = """CREATE TABLE "products" (
 
 cur.execute(sql)
 con.commit()
+con.close()
