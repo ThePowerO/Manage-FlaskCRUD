@@ -49,7 +49,12 @@ def edit_giveaway(id):
         con.commit()
         flash("Giveaway Edited", "success")
         return redirect(url_for('index'))
-    return render_template('edit_giveaway.html')
+    con = sql.connect('database.db')
+    con.row_factory = sql.Row
+    cur = con.cursor()
+    cur.execute('SELECT * FROM GiveAways WHERE ID=?', (id,))
+    data = cur.fetchone()
+    return render_template('edit_giveaway.html', datas=data)
 
 @app.route('/delete_giveaway/<string:id>', methods=['GET'])
 def delete_giveaway(id):
