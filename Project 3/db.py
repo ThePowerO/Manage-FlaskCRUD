@@ -8,3 +8,4 @@ sql = """CREATE TABLE "products" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
     "Product_Name" TEXT,
     "Type" TEXT,
+    "Brand" TEXT,
