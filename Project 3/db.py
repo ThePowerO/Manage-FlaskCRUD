@@ -13,3 +13,5 @@ sql = """CREATE TABLE "products" (
     "MadeIn" TEXT
 
 )"""
+
+cur.execute(sql)
