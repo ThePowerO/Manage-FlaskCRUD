@@ -10,3 +10,4 @@ sql = """CREATE TABLE "products" (
     "Type" TEXT,
     "Brand" TEXT,
     "Price" TEXT,
+    "MadeIn" TEXT
