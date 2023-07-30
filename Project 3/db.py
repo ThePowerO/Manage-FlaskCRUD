@@ -7,3 +7,4 @@ cur.execute('DROP TABLE IF EXISTS products')
 sql = """CREATE TABLE "products" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
     "Product_Name" TEXT,
+    "Type" TEXT,
