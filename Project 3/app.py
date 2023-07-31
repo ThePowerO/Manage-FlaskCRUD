@@ -52,3 +52,4 @@ def edit_product(id):
     return render_template('edit_product.html', datas=data)
 
 @app.route('/delete_product/<string:id>', methods=['GET'])
+def delete_product(id):
