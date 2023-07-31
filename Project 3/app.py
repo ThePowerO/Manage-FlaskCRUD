@@ -35,3 +35,4 @@ def edit_product(id):
         Product_Name = request.form['Product_Name']
         Type = request.form['Type']
         Brand = request.form['Brand']
+        Price = request.form['Price']
