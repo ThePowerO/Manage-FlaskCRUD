@@ -48,3 +48,4 @@ def edit_product(id):
     con.row_factory = sql.Row
     cur = con.cursor()
     cur.execute('SELECT * FROM products WHERE ID=?', (id,))
+    data = cur.fetchone()
