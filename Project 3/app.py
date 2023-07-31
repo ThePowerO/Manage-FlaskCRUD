@@ -53,3 +53,13 @@ def edit_product(id):
 
 @app.route('/delete_product/<string:id>', methods=['GET'])
 def delete_product(id):
+    con = sql.connect('database.db')
+    cur = con.cursor()
+    cur.execute("DELETE * FROM products WHERE ID=?", (id,))
+    con.commit()
+    flash("Product Deleted", "success")
+    return redirect(url_for('index'))
+
+if __name__ == "__main__":
+    app.secret_key = 'admin123'
+    app.run(debug=True)
