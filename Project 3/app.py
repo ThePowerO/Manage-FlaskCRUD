@@ -47,3 +47,4 @@ def edit_product(id):
     con = sql.connect('database.db')
     con.row_factory = sql.Row
     cur = con.cursor()
+    cur.execute('SELECT * FROM products WHERE ID=?', (id,))
