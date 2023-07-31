@@ -44,3 +44,4 @@ def edit_product(id):
         con.commit()
         flash("Product Updated", "success")
         return redirect(url_for('index'))
+    con = sql.connect('database.db')
