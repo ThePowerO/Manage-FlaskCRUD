@@ -37,3 +37,5 @@ def edit_product(id):
         Brand = request.form['Brand']
         Price = request.form['Price']
         MadeIn = request.form['MadeIn']
+
+        con = sql.connect('database.db')
