@@ -28,3 +28,5 @@ def add_products():
         flash("Product Added", "success")
         return redirect(url_for('index'))
     return render_template('add_product.html')
+
+@app.route('/edit_product/<strig:id>', methods=['POST', 'GET'])
