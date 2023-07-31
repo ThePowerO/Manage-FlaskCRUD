@@ -30,3 +30,4 @@ def add_products():
     return render_template('add_product.html')
 
 @app.route('/edit_product/<strig:id>', methods=['POST', 'GET'])
+def edt_product(id):
