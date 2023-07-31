@@ -49,3 +49,4 @@ def edit_product(id):
     cur = con.cursor()
     cur.execute('SELECT * FROM products WHERE ID=?', (id,))
     data = cur.fetchone()
+    return render_template('edit_product.html', datas=data)
