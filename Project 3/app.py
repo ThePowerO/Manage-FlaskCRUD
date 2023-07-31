@@ -45,3 +45,4 @@ def edit_product(id):
         flash("Product Updated", "success")
         return redirect(url_for('index'))
     con = sql.connect('database.db')
+    con.row_factory = sql.Row
